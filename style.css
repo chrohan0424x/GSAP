@@ -61,6 +61,11 @@ body,html{
     color: transparent;
     -webkit-text-stroke: 1px var(--black);
 }
+.main{
+    background: var(--bg-color);
+    width: 100vw;
+    height: calc(100vh - 50px);
+}
 .main table{
     width: 100%;
     border: 1px solid #000;

@@ -7,6 +7,13 @@ button.addEventListener('click', () => {
     icon.classList.toggle('fa-moon');
 });
 
+let asideBtn = document.querySelector('.mobile i');
+let aside = document.querySelector('aside');
+
+asideBtn.addEventListener('click', () => {
+    aside.classList.toggle('active');
+});
+
 gsap.from('.header',{
     y: '-100%',
     opacity: 0,

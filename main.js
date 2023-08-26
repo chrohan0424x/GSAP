@@ -12,3 +12,15 @@ gsap.from('.header',{
     opacity: 0,
     duration: 1
 }) 
+
+gsap.from('.moveLeft',{
+    opacity: 0,
+    x: '-100',
+    duration: 1
+})
+
+gsap.from('.moveRight',{
+    opacity: 0,
+    x: '100',
+    duration: 1
+})

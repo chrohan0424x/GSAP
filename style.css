@@ -28,6 +28,7 @@ body,html{
 .container .header{
     background: var(--white);
     /* position: fixed; */
+    z-index: 99;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,6 +54,12 @@ body,html{
 }
 .container .header .nav ul li a:hover{
     border-bottom: 1px solid var(--black);
+}
+.nav .mobile{
+    display: none;
+}
+.nav .mobile i{
+    color: var(--black);
 }
 .nav .mode i{
     color: var(--black);
@@ -98,4 +105,56 @@ tr{
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
+}
+aside{
+    display: none;
+    transform: translateX(-100%);
+    position: absolute;
+    top: 50px;
+    justify-content: center;
+    width: 250px;
+    left: 0;
+    background: var(--white);
+    z-index: 30;
+    transition: 0.5s linear;
+    box-shadow: 0 5px 5px var(--box-shadow);
+    height: calc(100vh - 50px);
+    /* border-top: 1px solid #ccc; */
+}
+aside.active{
+    transform: translateX(0);
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    /* padding: 30px; */
+    gap: 30px;
+}
+aside ul li a{
+    color: var(--black);
+    text-decoration: none;
+    text-align: center;
+}
+aside ul li{
+    /* border-bottom: 1px solid #000; */
+    text-align: center;
+    width: 100%;
+}
+aside ul li a:hover{
+    border-bottom: 2px solid var(--black);
+}
+@media (max-width: 700px){
+    .nav .mobile{
+        display: block;
+    }
+    aside{
+        display: flex;
+    }
+    .container .header .nav ul{
+        display: none;
+    }
 }
